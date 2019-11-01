@@ -14,7 +14,7 @@
 
 void set_PWM(double frequency){
     state double current_frequency;
-    if(frequency !- current_frequency){
+    if(frequency != current_frequency){
         if(!frequency){ TCCR3B &= 0x08; }
         else{ TCCR3B |= 0x03; }
         if(frequency < .954){ OCR3A = 0xFFFF;}
